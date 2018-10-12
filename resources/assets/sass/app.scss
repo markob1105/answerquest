@@ -1,0 +1,108 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+main {
+  margin-top: 0px;
+}
+
+p {
+  margin-bottom: 0px;
+}
+
+.stage {
+  margin-top: 0px!important;
+  padding-top: 0px!important;
+}
+
+.card-header img {
+  display: flex;
+  justify-content: space-around;
+}
+
+.answers-title {
+  color: darkslategray;
+}
+
+.best-answer {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.fas {
+  color: gold;
+  padding-right: 5px;
+}
+
+.b-a-body {
+  padding-left: 3px;
+  font-size: 1rem;
+}
+
+.answercard {
+  padding: 5px;
+}
+
+.ba-image{
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.p-image {
+  width: 120px;
+  height:120px;
+  border-radius: 60px;
+}
+
+.tags {
+  border: 1px solid darkgrey;
+  border-radius: 6px;
+  margin: 0 2px 0 2px;
+  padding: 0 3px 0 3px;
+}
+
+.question-index {
+  margin-bottom: 5px;
+}
+
+.btn {
+  padding-top: 1px!important;
+  padding-bottom: 1px!important;
+}
+
+.name-big {
+  padding: 3% 0 3% 0;
+}
+
+.p-tags {
+  color:green;
+}
+
+.card {
+  padding: 1.25rem;
+}
+
+#oya-form {
+  margin-bottom: 0.2rem!important;
+}
+
+#oya-btn {
+  margin-bottom: 0.5rem!important;
+}
+
+.user-name-time {
+  padding: 1% 0 1% 0;
+  margin-left: 5px;
+}
