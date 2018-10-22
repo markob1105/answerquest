@@ -26,12 +26,11 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
+
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                @if(Auth::check())
-                <a class="navbar-brand" href="/profile/{{Auth::user()->id}}"> My Profile </a>
-                @endif
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -39,7 +38,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li>
+                            @if(Auth::check())
+                                <a class="navbar-brand" href="/profile/{{Auth::user()->id}}"> My Profile </a>
+                            @endif
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,7 +79,7 @@
             </div>
         </nav>
 
-        <main class="py-0">
+        <main class="py-4">
             @yield('content')
         </main>
     </div>
@@ -85,13 +88,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script>
       $(document).ready(function(){
-        /*$(".js-data-example-ajax").select2({
-          tags: true
-        });*/
-        /*$('#tags').select2({
-          placeholder : "Select or add tag",
-          tags : true
-        });*/
           $('.js-data-example-ajax').select2({
             placeholder : "Select or add tag",
             tags : true,

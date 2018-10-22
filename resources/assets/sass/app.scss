@@ -13,10 +13,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-main {
-  margin-top: 0px;
-}
-
 p {
   margin-bottom: 0px;
 }
@@ -55,15 +51,15 @@ p {
 }
 
 .ba-image{
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .p-image {
-  width: 120px;
-  height:120px;
-  border-radius: 60px;
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
 }
 
 .tags {
@@ -90,8 +86,8 @@ p {
   color:green;
 }
 
-.card {
-  padding: 1.25rem;
+.question-card {
+  padding: 1.1rem;
 }
 
 #oya-form {
@@ -105,4 +101,26 @@ p {
 .user-name-time {
   padding: 1% 0 1% 0;
   margin-left: 5px;
+}
+
+#user-name-question {
+  font-size: medium;
+  color: #212529!important;
+}
+
+#user-time-question {
+  font-size: medium;
+  color: #212529!important;
+}
+
+.title {
+  font-size: 1.05rem;
+}
+
+.js-data-example-ajax {
+  width: 100%;
+}
+
+span {
+  min-width: 10%;
 }

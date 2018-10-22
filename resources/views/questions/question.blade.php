@@ -1,24 +1,24 @@
 <div class="card mb-3 question-card">
 
-    <div class="d-flex">
+    <div class="d-flex flex-column flex-lg-row">
 
       <div>
-        <img class="img-thumbnail m-3 p-image" src="{{ asset('/upload/profile/' . $question->user->profile_image) }}" alt="">
+        <img class="img-thumbnail m-1 p-image" src="{{ asset('/upload/profile/' . $question->user->profile_image) }}" alt="">
       </div>
 
-      <div class="m-4 name-big" >
-        <a href="/profile/{{ $question->user->id }}">
-          <h4 id="user-name">{{ $question->user->name }}</h4>
+      <div class="m-2 name-big" >
+        <a id="user-name-question" href="/profile/{{ $question->user->id }}">
+          {{ $question->user->name }}
         </a>
-        <a href="/questions/{{ $question->id }}">
-          <p class="meta time">on {{ $question->created_at->toDayDateTimeString() }}</p>
+        <a id="user-time-question" href="/questions/{{ $question->id }}">
+          on {{ $question->created_at->toDayDateTimeString() }}
         </a>
       </div>
 
     </div>
 
     <div  class="question-index">
-      <h3 class="title">{{ $question->body }}</h3>
+      <p class="title">{{ $question->body }}</p>
 
       @if( $question->created_at->addMinutes(10) >= now() )
         @if(Auth::user()->id === $question->user_id)

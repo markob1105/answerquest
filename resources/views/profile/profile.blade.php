@@ -12,7 +12,7 @@
               @else
                 <h5 align="center">{{ $user->name }}'s profile:</h5>
               @endif
-              <div class="d-flex justify-content-between py-2">
+              <div class="d-flex justify-content-between flex-column flex-md-row py-2">
                 <div>
                   <h5>Name: {{ $user->name }}</h5>
                   <h5>Email: {{ $user->email }}</h5>
