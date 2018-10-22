@@ -21,10 +21,8 @@
     <div  class="question-index">
       <p class="title">{{ $question->body }}</p>
 
-      @if( $question->created_at->addMinutes(10) >= now() )
-        @if(Auth::user()->id === $question->user_id)
-          <a href="/questions/{{ $question->id }}/edit" id="btn-edit" class="btn btn-sm btn-dark pull-right">Edit</a>
-        @endif
+      @if( Auth::user() && Auth::user()->id === $question->user_id && $question->created_at->addMinutes(10) >= now() )
+        <a href="/questions/{{ $question->id }}/edit" id="btn-edit" class="btn btn-sm btn-dark pull-right">Edit</a>
       @endif
 
       @if($question->tags->count())
