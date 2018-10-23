@@ -18,7 +18,7 @@ class CreateAnswersTable extends Migration
             $table->integer('user_id');
             $table->integer('question_id');
             $table->string('body');
-            $table->boolean('best_answer');
+            $table->boolean('best_answer')->default(false);
             $table->timestamps();
         });
     }
